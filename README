@@ -1,0 +1,11 @@
+WP-Boilerplate
+
+I got fed up of searching for decent HTML5 Boilerplate-based Wordpress starter themes, so here is my own. This is heavily based on Paul Irish's HTML5 Boilerplate, also some inspiration came from Zencoder's wordpress boilerplate.
+
+Aims:
+
+To be as minimal as possible - When I start a new site I don't like having to delete loads of templates I don't need. index.php and single.php ought to be enough to get you started. No tags, no author links, no category links etc clogging up the markup - every website is different - if you need them, why don't you add them yourself.
+
+To integrate as much of the useful stuff in HTML5 Boilerplate as reasonably possible
+
+No unit tests or stuff like that. I never use them. When I learn to, maybe I'll include it.
