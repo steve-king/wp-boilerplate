@@ -1,8 +1,5 @@
 <aside class="side-col">
 
-<?php /* Widgetized sidebar, if you have the plugin installed. */
-if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()): ?>
-
   <section>
     <?php get_search_form(); ?>
   </section>
@@ -31,5 +28,8 @@ if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()): ?>
         </li>
     </ul>
   </nav>
-<?php endif; ?>
+
+<!-- Widget area -->
+<?php dynamic_sidebar('Sidebar');?>
+
 </aside><!-- END .side-col -->
