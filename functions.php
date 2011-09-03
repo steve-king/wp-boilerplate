@@ -25,16 +25,22 @@
 	<?php
 	}
 
+	// Register menu
+	register_nav_menus(
+		array(
+		  'main_nav' => 'Main Navigation'
+		)
+	);
+	
 	// Widgetized Sidebar HTML5 Markup
-	if ( function_exists('register_sidebar') ) {
-		register_sidebar(array(
-			'name' => 'Sidebar',
-			'before_widget' => '<section>',
-			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widgettitle">',
-			'after_title' => '</h2>',
-		));
-	}
+	register_sidebar(array(
+		'name' => 'Sidebar',
+		'before_widget' => '<section>',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
+	));
+	
 	
 	// Clean up wp_head()
 	add_filter( 'show_admin_bar', '__return_false' );

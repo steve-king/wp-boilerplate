@@ -28,6 +28,8 @@
 			<p><?php bloginfo('description')?></p>
     </header><!-- END header -->
     
+    <nav><?php wp_nav_menu(array('menu' => 'main_nav', 'container' => false))?></nav>
+    
     <div class="main" role="main">
 
     
