@@ -13,11 +13,7 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- end CSS-->
-
-  <!-- /* <script src="js/libs/modernizr-2.0.6.min.js"></script> */ -->
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
   
   <!-- Wordpress Head Items -->
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -28,7 +24,8 @@
 
   <div class="container">
     <header>
-
+			<h1><a href="<?php get_option('home')?>"><?php bloginfo('title')?></a></h1>
+			<p><?php bloginfo('description')?></p>
     </header><!-- END header -->
     
     <div class="main" role="main">

@@ -37,11 +37,10 @@
 	
 	
 	
-	// Add ?v=[last modified time] to a file url
+	// Add ?v=[last modified time] to a file url - for cache busting
 	function get_file_version($absolute_url){
 		
 		$relative_url = wp_make_link_relative($absolute_url);
-	
 	  $file = $_SERVER["DOCUMENT_ROOT"].$relative_url;
 	  $file_version = "";
 	
@@ -51,30 +50,57 @@
 	  return $file_version;
 	}
 
-
-
+	// Add ?v=[last modified time] to stylesheet
+	add_filter('stylesheet_uri', 'versioned_stylesheet_uri');
+	function versioned_stylesheet_uri($url){
+		$v_url = $url.get_file_version($url);
+		return $v_url;
+	}
+	
+	
 
 	// Register Scripts
   function register_scripts() {
     if (!is_admin()){
     	
-    	$scripts = array();
+    	wp_deregister_script('jquery'); // Lets use the most modern version rather than the one packaged with Wordpress
+    	wp_deregister_script( 'l10n' ); // Unneccessary http request made by WP
+
+    	// Add scripts to this array as neccessary
+    	$scripts = array(
+    		'modernizr' => array(
+    			'url' => get_bloginfo('template_directory').'/js/libs/modernizr-2.0.6.min.js',
+    			'dependencies' => false,
+    			'version' => '2.0.6',
+    			'in_footer' => false
+    		),
+    		
+    		'jQuery' => array(
+    			'url' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
+    			'dependencies' => false,
+    			'version' => '1.6.2',
+    			'in_footer' => true
+    		),
+    		
+    		'plugins' => array(
+    			'url' => get_bloginfo('template_directory').'/js/plugins.js',
+    			'dependencies' => array('modernizr', 'jquery'),
+    			'version' => get_file_version($scripts['plugins']['url']),
+    			'in_footer' => true
+    		),
+    		
+    		'functions' => array(
+    			'url' => get_bloginfo('template_directory').'/js/functions.js',
+    			'dependencies' => array('modernizr', 'jquery', 'plugins'),
+    			'version' => get_file_version($scripts['functions']['url']),
+    			'in_footer' => true
+    		)
+    	);
     	
-    	$scripts[0]['name'] = 'jquery';
-    	$scripts[0]['url'] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js';
-    	$scripts[0]['dependencies'] = false;
-    	$scripts[0]['version'] = '1.6.2';
-    	$scripts[0]['in_footer'] = false;
-    	
-    	$scripts[1]['name'] = 'modernizr';
-    	$scripts[1]['url'] = get_bloginfo('template_directory').'/js/libs/modernizr-2.0.6.min.js';
-    	$scripts[1]['dependencies'] = false;
-    	$scripts[1]['version'] = get_file_version($scripts[1]['url']);
-    	$scripts[1]['in_footer'] = false;
-    	
-    	foreach($scripts as $script){
-    		wp_register_script($script['name'], $script['url'], $script['dependencies'], $script['version'], $script['in_footer']);
-    		wp_enqueue_script($script['name']);
+    	// Register and enqueue the above scripts
+    	foreach($scripts as $key => $val){
+    		wp_register_script($key, $val['url'], $val['dependencies'], $val['version'], $val['in_footer']);
+    		wp_enqueue_script($key);
     	}
     }
 	}    
