@@ -25,6 +25,12 @@
 	<?php
 	}
 	
+	add_filter( 'show_admin_bar', '__return_false' );
+	remove_action('wp_head', 'rsd_link');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'index_rel_link');
+	remove_action('wp_head', 'wp_generator');
+
 	// Widgetized Sidebar HTML5 Markup
 	if ( function_exists('register_sidebar') ) {
 		register_sidebar(array(
