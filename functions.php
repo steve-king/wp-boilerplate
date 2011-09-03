@@ -89,10 +89,10 @@
     			'in_footer' => true
     		),
     		
-    		'functions' => array(
-    			'url' => get_bloginfo('template_directory').'/js/functions.js',
+    		'script' => array(
+    			'url' => get_bloginfo('template_directory').'/js/script.js',
     			'dependencies' => array('modernizr', 'jquery', 'plugins'),
-    			'version' => get_file_version($scripts['functions']['url']),
+    			'version' => get_file_version($scripts['script']['url']),
     			'in_footer' => true
     		)
     	);
