@@ -82,12 +82,12 @@
     	$scripts = array(
     		'modernizr' => array(
     			'url' => get_bloginfo('template_directory').'/js/libs/modernizr-2.0.6.min.js',
-    			'dependencies' => false,
+    			'dependencies' => true,
     			'version' => '2.0.6',
     			'in_footer' => false
     		),
     		
-    		'jQuery' => array(
+    		'jquery' => array(
     			'url' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
     			'dependencies' => false,
     			'version' => '1.6.2',

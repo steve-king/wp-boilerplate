@@ -18,6 +18,6 @@
   
   <?php wp_footer(); ?>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-  
+ 
 </body>
 </html>
