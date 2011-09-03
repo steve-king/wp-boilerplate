@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- end CSS-->
 
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <!-- /* <script src="js/libs/modernizr-2.0.6.min.js"></script> */ -->
   
   <!-- Wordpress Head Items -->
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

@@ -39,7 +39,7 @@
 	
 	// Add ?v=[last modified time] to a file url
 	function get_file_version($absolute_url){
-	
+		
 		$relative_url = wp_make_link_relative($absolute_url);
 	
 	  $file = $_SERVER["DOCUMENT_ROOT"].$relative_url;
@@ -61,18 +61,18 @@
     	$scripts = array();
     	
     	$scripts[0]['name'] = 'jquery';
-    	$scripts[0]['url'] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js';
+    	$scripts[0]['url'] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js';
     	$scripts[0]['dependencies'] = false;
-    	$scripts[0]['version'] = get_file_version($scripts[0]['url']);
+    	$scripts[0]['version'] = '1.6.2';
     	$scripts[0]['in_footer'] = false;
     	
     	$scripts[1]['name'] = 'modernizr';
-    	$scripts[1]['url'] = get_bloginfo('template_directory').'/js/libs/modernizr-1.7.min.js';
+    	$scripts[1]['url'] = get_bloginfo('template_directory').'/js/libs/modernizr-2.0.6.min.js';
     	$scripts[1]['dependencies'] = false;
     	$scripts[1]['version'] = get_file_version($scripts[1]['url']);
     	$scripts[1]['in_footer'] = false;
     	
-    	foreach($script in $scripts){
+    	foreach($scripts as $script){
     		wp_register_script($script['name'], $script['url'], $script['dependencies'], $script['version'], $script['in_footer']);
     		wp_enqueue_script($script['name']);
     	}
