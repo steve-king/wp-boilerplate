@@ -24,12 +24,6 @@
 	    <!-- </li> is added by wordpress automatically -->
 	<?php
 	}
-	
-	add_filter( 'show_admin_bar', '__return_false' );
-	remove_action('wp_head', 'rsd_link');
-	remove_action('wp_head', 'wlwmanifest_link');
-	remove_action('wp_head', 'index_rel_link');
-	remove_action('wp_head', 'wp_generator');
 
 	// Widgetized Sidebar HTML5 Markup
 	if ( function_exists('register_sidebar') ) {
@@ -41,7 +35,12 @@
 		));
 	}
 	
-	
+	// Clean up wp_head()
+	add_filter( 'show_admin_bar', '__return_false' );
+	remove_action('wp_head', 'rsd_link');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'index_rel_link');
+	remove_action('wp_head', 'wp_generator');
 	
 	// Add ?v=[last modified time] to a file url - for cache busting
 	function get_file_version($absolute_url){
