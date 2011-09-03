@@ -22,8 +22,7 @@
 	  
 	<?php else: ?>
 	
-		<h2>Not found</h2>
-		<p>Sorry, couldn't find anything...</p>
+	<?php wp_redirect(get_bloginfo('siteurl').'/404', 404); exit; ?>
 		
 	<?php endif;?>
 
