@@ -2,7 +2,7 @@
 
 <div class="main-col">
 		
-		<article class="post">
+		<article role="article" class="post">
 			<header>
 				<h2>404 - Not found</h2>
 	    </header>

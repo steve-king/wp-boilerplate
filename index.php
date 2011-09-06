@@ -3,7 +3,7 @@
 <div class="main-col">
 	<?php if(have_posts()): while(have_posts()): the_post();?>
 		
-		<article id="post_<?php the_ID()?>" <?php post_class()?>>
+		<article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
 			<header>
 				<h2><?php the_title()?></h2>
 				<time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
