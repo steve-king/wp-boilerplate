@@ -7,17 +7,13 @@ inspiration came from Zencoder's wordpress boilerplate.
 Aims:
 
 To be as minimal as possible - When I start a new site I don't like having to delete 
-loads of templates I don't need. index.php and single.php ought to be enough to get you 
-started. No tags, no author links, no category links, etc clogging up the markup - every 
-website is different - if you need them, why don't you add them yourself?
+loads of templates I don't need. index.php ought to be enough to get you 
+started. No tags, no author links, no category links etc clogging up the markup
 
 To integrate as much of the useful stuff in HTML5 Boilerplate as reasonably possible.
 
 No unit tests or build scripts. I've never used them. When I learn to, maybe I'll include them.
-No comments - this is based on the 'stripped' HTML5 Boilerplate
-
-Tip: do a find/replace on those ugly <?php echo tags to <?= it will make your life easier and more fulfilling. I haven't done this
-for you as unfortunately some servers are too retarded to understand them
+No html/css comments - this is based on the 'stripped' HTML5Boilerplate
 
 Look in the html5-boilerplate folder for stuff you may want to move to the root. Or delete. Here's some notes about them courtesy of zencoder:
 
@@ -42,7 +38,7 @@ Tells all search engines that they can read and index all pages. This is handled
 Root Images
 -----------
 These are included with the HTML5 Boilerplate. I've removed references to them in header.php - if you place them in the root
-directory of your server they should work.
+directory of your server they will work.
 
 ### favicon.ico
 The favicon is the icon shown to the left of the URL at the top of your browser window.
