@@ -7,8 +7,8 @@ inspiration came from Zencoder's wordpress boilerplate.
 Aims:
 
 To be as minimal as possible - When I start a new site I don't like having to delete 
-loads of templates I don't need. index.php ought to be enough to get you 
-started. No tags, no author links, no category links etc clogging up the markup
+loads of templates I don't need. index.php ought to be enough to get 
+started
 
 To integrate as much of the useful stuff in HTML5 Boilerplate as reasonably possible.
 
