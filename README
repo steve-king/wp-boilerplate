@@ -15,7 +15,7 @@ To integrate as much of the useful stuff in HTML5 Boilerplate as reasonably poss
 No unit tests or build scripts. I've never used them. When I learn to, maybe I'll include them.
 No html/css comments - this is based on the 'stripped' HTML5Boilerplate
 
-Look in the html5-boilerplate folder for stuff you may want to move to the root. Or delete. Here's some notes about them courtesy of zencoder:
+Look in the html5-boilerplate folder for stuff you may want to move to the server root. Here's some notes about them courtesy of zencoder:
 
 Root Files
 ----------

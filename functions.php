@@ -81,14 +81,14 @@
     	// Add scripts to this array as neccessary
     	$scripts = array(
     		'modernizr' => array(
-    			'url' => get_bloginfo('template_directory').'/js/libs/modernizr-2.0.6.min.js',
+    			'url' => get_bloginfo('template_directory').'/js/libs/modernizr-2.5.3.min.js',
     			'dependencies' => true,
     			'version' => '2.0.6',
     			'in_footer' => false
     		),
     		
     		'jquery' => array(
-    			'url' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
+    			'url' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
     			'dependencies' => false,
     			'version' => '1.6.2',
     			'in_footer' => true
