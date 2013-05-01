@@ -19,7 +19,7 @@
     <![endif]-->  
     
     <header>
-		<h1><a href="<?php get_option('home')?>"><?php bloginfo('title')?></a></h1>
+		<h1><a href="<?php bloginfo('url')?>"><?php bloginfo('title')?></a></h1>
 		<p><?php bloginfo('description')?></p>
 	</header><!-- END header -->
 
