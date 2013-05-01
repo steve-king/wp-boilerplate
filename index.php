@@ -1,6 +1,5 @@
 <?php get_header();?>
 
-<div class="main-col">
 	<?php if(have_posts()): while(have_posts()): the_post();?>
 		
 		<article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
@@ -26,6 +25,5 @@
 		
 	<?php endif;?>
 
-</div><!-- END .main-col -->
 
 <?php get_footer();?>
