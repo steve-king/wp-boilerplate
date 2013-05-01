@@ -18,11 +18,14 @@
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->  
     
+
     <header>
 		<h1><a href="<?php bloginfo('url')?>"><?php bloginfo('title')?></a></h1>
 		<p><?php bloginfo('description')?></p>
 	</header><!-- END header -->
 
-	<nav><?php wp_nav_menu(array('menu' => 'main_nav', 'container' => false))?></nav>  
+	<nav><?php wp_nav_menu(array('menu' => 'main_nav', 'container' => false))?></nav> 
+	
+	<div class="main"> 
     
     
