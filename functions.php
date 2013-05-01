@@ -71,7 +71,7 @@
 	    		),
 	    		
 	    		'script' => array(
-	    			'url' => get_bloginfo('template_directory').'/scripts/script.js',
+	    			'url' => get_bloginfo('template_directory').'/scripts/main.js',
 	    			'dependencies' => array('modernizr', 'jquery', 'plugins'),
 	    			'version' => get_file_version($scripts['script']['url']),
 	    			'in_footer' => true
